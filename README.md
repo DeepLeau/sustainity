@@ -95,9 +95,6 @@ The API follows an MVC (Model-View-Controller) architecture with a clear separat
    ```
 
 3. Configuring environment variables
-   ```bash
-   cp .env.example .env
-   ```
    Modify the `.env` file with your parameters:
    ```
    PORT=3000

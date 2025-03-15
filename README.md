@@ -209,45 +209,35 @@ sustainity-data-import/
 └── package.json          # Dependencies and scripts
 ```
 
-## Caractéristiques Techniques
+## Technical specifications
 
-### Traitement des fichiers CSV
+### CSV file processing
 
-Le service utilise `csv-parser` pour traiter les fichiers CSV ligne par ligne, permettant de manipuler efficacement de grandes quantités de données sans consommer trop de mémoire.
+The service uses `csv-parser` to process CSV files line by line, enabling efficient handling of large amounts of data without consuming too much memory.
 
-### Conversion des types de données
+### Data type conversion
 
-Le système prend en charge la conversion des types de données suivants :
-- `string` / `text` : Valeurs textuelles
-- `integer` / `int` : Nombres entiers
-- `decimal` / `float` / `number` : Nombres à virgule flottante
-- `boolean` / `bool` : Valeurs booléennes (true/false)
-- `date` : Dates formatées
+The system supports conversion of the following data types:
+- `string` / `text` : Text values
+- `integer` / `int` : Integers
+- `decimal` / `float` / `number` : Floating-point numbers
+- `boolean` / `bool` : Boolean values (true/false)
+- `date` : Formatted dates
 
-### Traitement asynchrone
+### Asynchronous processing
 
-Pour les fichiers volumineux, le système utilise Bull avec Redis pour le traitement asynchrone :
-- Mise en file d'attente des jobs
-- Suivi de l'état des jobs
-- Gestion des échecs et des erreurs
+For large files, the system uses Bull with Redis for asynchronous processing:
+- Job queuing
+- Job status monitoring
+- Management of failures and errors
 
-### Mappage intelligent
+### Intelligent mapping
 
-Le service offre des suggestions de mappage basées sur l'analyse des en-têtes CSV, utilisant :
-- Correspondance exacte ou partielle des noms de colonnes
-- Normalisation des noms pour une meilleure correspondance
-- Liste prédéfinie de champs disponibles
+The service offers mapping suggestions based on CSV header analysis, using :
+- Exact or partial matching of column names
+- Normalization of names for better matching
+- Predefined list of available fields
 
-## Contribuer
+## License
 
-Nous accueillons les contributions ! Pour contribuer :
-
-1. Forkez le dépôt
-2. Créez une branche pour votre fonctionnalité (`git checkout -b feature/amazing-feature`)
-3. Committez vos changements (`git commit -m 'Add some amazing feature'`)
-4. Poussez vers la branche (`git push origin feature/amazing-feature`)
-5. Ouvrez une Pull Request
-
-## Licence
-
-Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
+This project is licensed under the MIT license. See the `LICENSE` file for more details.
